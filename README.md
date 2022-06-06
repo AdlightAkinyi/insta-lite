@@ -32,3 +32,10 @@ python3 manage.py runserver
 python3 manage.py test 
 
 Open the application on your browser 127.0.0.1:8000.
+
+# Technologies used
+python3.8
+
+Django
+
+Heroku
