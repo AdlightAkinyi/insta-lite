@@ -9,3 +9,5 @@ Adlight Akinyi
 
 # Set-up/installation requirements
 git clone https://github.com/AdlightAkinyi/insta-lite.git
+
+cd insta-lite
