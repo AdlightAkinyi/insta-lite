@@ -33,6 +33,16 @@ python3 manage.py test
 
 Open the application on your browser 127.0.0.1:8000.
 
+# User story
+Sign in to the application to start using.
+
+Upload a pictures to the application.
+
+Search for different users using their usernames.
+
+See your profile with all your pictures.
+Follow other users and see their pictures on my timeline
+
 # Technologies used
 python3.8
 
