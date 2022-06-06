@@ -30,3 +30,5 @@ python3 manage.py runserver
 # Testing the app
 
 python3 manage.py test 
+
+Open the application on your browser 127.0.0.1:8000.
