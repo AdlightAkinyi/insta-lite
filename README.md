@@ -39,3 +39,6 @@ python3.8
 Django
 
 Heroku
+
+# Support/Contact details
+adlightakinyi1@gmail.com
