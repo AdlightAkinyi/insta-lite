@@ -25,5 +25,8 @@ python manage.py migrate
 
 # Running the app
 
-python manage.py runserver
+python3 manage.py runserver
 
+# Testing the app
+
+python3 manage.py test 
