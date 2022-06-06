@@ -23,3 +23,7 @@ python manage.py makemigrations instagram
 
 python manage.py migrate 
 
+# Running the app
+
+python manage.py runserver
+
