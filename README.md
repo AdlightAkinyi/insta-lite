@@ -18,3 +18,8 @@ source virtual/bin/activate
 
 pip install -r requirements.txt 
 
+# setup database
+python manage.py makemigrations instagram
+
+python manage.py migrate 
+
