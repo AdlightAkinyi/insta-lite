@@ -1,48 +1,33 @@
-{% extends 'base.html' %}
-{% load crispy_forms_tags %}
+{% extends 'registration/base.html' %}
+{% load bootstrap4 %}
+
 {% block content %}
-{% load static %}
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            <img src="{% static 'images/insta6.png' %}"  alt=""  width="100%" height="100%" id="insta">
-        </div>
-        <div class="col-md-4 mt-4">
-            <div class="card ">
-                <div class="card-title mt-4">
-                    <img src="{% static 'images/insta5.png' %}" alt="" width="40%" class="D-block mx-auto">
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            {% if form.errors %}
+            <p>Password or username is incorrect</p>
+            {% endif %}
+            <div class="section">
+                <div class="logo mb-5 mt-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2000px-Instagram_logo.svg.png" alt="" class="img-fluid">
                 </div>
-                <div class="card-body mb-3 mr-3 ml-3">
-                    <form action="" method="post" novalidate>
-                        {% csrf_token%}
-                        {{ form|crispy}}
-                        <button type="submit" class="btn btn-primary btn-sm D-block mx-auto"> Log In</button>
+                <div class="form-section" id="login">
+                    <form action="/accounts/login/" method="POST">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-sm login" value="Log In">
+                        </div>
+                        <input type="hidden" name="next" value="/">
                     </form>
                 </div>
-                <a href="" class="D-block mx-auto mb-3">Forgot password? </a>
+                <p class="text-center"><a href="#">Forgot password?</a></p>
             </div>
-            <div class="card mt-2">
-                <div class="card-body mt-3 mb-3 mr-2 ml-4">
-                    Don't have an account? <a href="{% url 'signup' %}">Sign up</a>
-                </div>
-            </div>
-            <div container>
-                <p class="text-center mt-4">Get the app</p>
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-5 mb-2">
-                        <img src="{% static 'images/insta2.png' %}" alt="" width="100%" class="download">
-                    </div>
-                    <div class="col-md-5 mb-2">
-                        <img src="{% static 'images/insta1.png' %}" alt="" width="100%" class="download">
-                    </div>
-                    <div class="col-md-1"></div>
-                </div>
+            <div class="section">
+                <p class="text-center mt-2">Don't have an account?<a href="/signup/"> Sign Up</a></p>
             </div>
         </div>
-        <div class="col-md-2"></div>
     </div>
 </div>
-
 {% endblock %}
